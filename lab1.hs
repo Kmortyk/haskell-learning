@@ -1,15 +1,15 @@
 -- 1. --- Типы ---------------------------------------------------------------------------------------------------------
 
--- 1) (('a',1), "abc", [1.0,2.0])     -> ((Char,Integer), String, [Double])
--- 2) [(1.0,True,("abc",1))]          -> [(Double,Bool,(String,Integer))]
--- 3) ([1,2],[1.0,2.0],[(True,'a')])  -> ([Integer],[Double],[(Bool,Char)])
--- 4) [[[(1,True),(2,True)]]]         -> [[[(Integer,Bool)]]]
--- 5) ((('a','b'),'c'),["abc","def"]) -> (((Char,Char),Char),[String])
--- 6) (([Double],[Bool]),[Integer])
--- 7) [Integer, (Integer,[Bool])]
--- 8) (Bool,([Bool],[Integer]))
--- 9) [([Bool],[Double])]
--- 10) [([Integer],[Char])]
+-- 1)  (('a',1), "abc", [1.0,2.0])                                                           -> ((Char,Integer), String, [Double])
+-- 2)  [(1.0,True,("abc",1)),(2.0,False,("bcd",1))]                                          -> [(Double,Bool,(String,Integer))]
+-- 3)  ([1,2],[1.0,2.0],[(True,'a'),(False,'b')])                                            -> ([Integer],[Double],[(Bool,Char)])
+-- 4)  [[[(1,True),(2,True)],[(1,True),(2,True)]],[[(1,True),(2,True)],[(1,True),(2,True)]]] -> [[[(Integer,Bool)]]]
+-- 5)  ((('a','b'),'c'),["abc","def"])                                                       -> (((Char,Char),Char),[String])
+-- 6)  (([2.0,3.0],[True,False]),[1,2,4,5])                                                  -> (([Double],[Bool]),[Integer])
+-- 7)  [1, (2,[True,False])] - некорректное задание ---------------------------------------- -> [Integer, (Integer,[Bool])]
+-- 8)  (True,([False,True],[1,1,2]))                                                         -> (Bool,([Bool],[Integer]))
+-- 9)  [([False,True,True],[2.0,1.0,3.52]), ([True],[45.0,11.5])]                            -> [([Bool],[Double])]
+-- 10) [([1,1,1],['a','b','c']),([1,2,3],['a','b']),([1,3,3],['a','b','c','d'])]             -> [([Integer],[Char])]
 
 -- 2. --- Функции ------------------------------------------------------------------------------------------------------
 
