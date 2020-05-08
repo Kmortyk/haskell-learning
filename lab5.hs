@@ -2,7 +2,7 @@
 
 import Data.List -- импорт для foldl'
 
--- Арифметическое среднее элементов списка
+-- 1. Арифметическое среднее элементов списка
 --
 meant :: [Integer] -> Double
 summt = foldl (+) 0
@@ -11,7 +11,7 @@ meant xs =
            in fromIntegral s / fromIntegral n
 
 
--- Арифметическое среднее элементов списка (в один проход)
+-- 1. Арифметическое среднее элементов списка (в один проход)
 --
 mean :: [Integer] -> Double
 mean xs = divf $ foldl' sumf (0, 0) xs
@@ -20,12 +20,12 @@ mean xs = divf $ foldl' sumf (0, 0) xs
     divf (s, n) = fromIntegral s / fromIntegral n
 
 
--- Скалярное произведение двух списков
+-- 2. Скалярное произведение двух списков
 --
 dot xs ys = foldr (+) 0 (zipWith (*) xs ys)
 
 
--- Количество четных элементов в списке
+-- 3. Количество четных элементов в списке
 --
 evenn :: Integer -> Integer -> Integer
 evenn x y
@@ -36,7 +36,7 @@ countEven :: [Integer] -> Integer
 countEven xs = foldr evenn 0 xs
 
 
--- `Быстрая` сортировка
+-- 4. `Быстрая` сортировка
 --
 quicksort :: [Integer] -> [Integer]
 quicksort [] = []
@@ -46,7 +46,7 @@ quicksort (x:xs) =
   in  as ++ [x] ++ bs
 
 
--- `Быстрая` сортировка обобщённая
+-- 5. `Быстрая` сортировка обобщённая
 --
 -- Примеры использования:
 -- qsort (\y x -> y < x) [2,1,10,8,9,7]
